@@ -22,7 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('products/', products, name="products"),
+                  path('', products, name="products"),
                   path("product/<int:art_id>", art, name="art"),
                   path('success/', success, name="successMessage"),
                   path('payment/<int:art_id>', payment, name="payment"),

@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar bg-body-tertiary mb-3">
     <div class="container-fluid">
-        <a class="nav-link active" aria-current="page" href="/products">Home</a>
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
 
         <div class="d-flex justify-content-end align-items-center flex-grow-1">
             {% if request.user.is_authenticated %}
@@ -35,9 +35,9 @@
                 Category
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/products">All</a></li>
+                <li><a class="dropdown-item" href="/">All</a></li>
                 {% for category in categories %}
-                    <li><a class="dropdown-item" href="/products/?categories={{ category.id }}">{{ category.name }}</a>
+                    <li><a class="dropdown-item" href="/?categories={{ category.id }}">{{ category.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
